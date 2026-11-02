@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#25282b">
+    <title>A Journey Called Love</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Dekorasi latar -->
+    <div class="floating-hearts" id="floatingHearts" aria-hidden="true"></div>
+    <div class="color-decoration decoration-one" aria-hidden="true"></div>
+    <div class="color-decoration decoration-two" aria-hidden="true"></div>
+    <div class="color-decoration decoration-three" aria-hidden="true"></div>
+    <div class="color-decoration decoration-four" aria-hidden="true"></div>
+
+    <!-- HALAMAN PEMBUKA -->
+    <section class="screen active" id="opening">
+        <div class="background-glow" aria-hidden="true"></div>
+
+        <nav class="navbar">
+            <div class="logo">♡ HALAMAN FAVORIT</div>
+            <div class="nav-text">BUKU YANG DITULIS 2 ORANG</div>
+        </nav>
+
+        <main class="hero-content">
+            <p class="eyebrow">✧ SEDIKIT CERITA TENTANG KISAH KITA ✧</p>
+
+            <h1>
+                A JOURNEY
+                <span>CALLED LOVE</span>
+            </h1>
+
+            <div class="divider"><span></span>♡<span></span></div>
+
+            <p class="description">
+                Setiap halaman punya cerita,
+                tetapi ada beberapa yang ingin
+                dibaca berulang kali.
+            </p>
+
+            <p class="invitation">Siap menjelajahi buku kita?</p>
+
+            <button class="main-button" onclick="startJourney()">
+                MULAI MEMBACA <span>♡</span>
+            </button>
+
+            <p class="bottom-note">Sebuah cerita kecil untuk dikenang.</p>
+        </main>
+
+        <footer>
+            <span>BAB 01</span>
+            <span>SELALU ADA CERITA BARU ♡</span>
+        </footer>
+    </section>
+
+    <!-- BAB 02: AWAL CERITA -->
+    <section class="screen" id="journey">
+        <main class="journey-container">
+            <p class="eyebrow">BAB 02 · AWAL CERITA</p>
+            <h2>Di Mana Semuanya <span>Dimulai</span></h2>
+            <div class="heart-icon">♡</div>
+
+            <p class="journey-text">
+Setiap cerita indah pasti punya permulaan.
+
+Dan entah bagaimana, di antara banyaknya
+orang di dunia ini, jalan kita akhirnya bertemu.
+
+Mungkin hanya kebetulan.
+Mungkin juga sebuah takdir kecil.
+
+Namun, satu hal yang pasti:
+mengenal "kita" menjadi salah satu bagian
+yang menyenangkan dalam perjalanan hidup.
+            </p>
+
+            <button class="main-button" onclick="nextChapter('memories')">
+                LANJUTKAN CERITA →
+            </button>
+        </main>
+    </section>
+
+    <!-- BAB 03: DAFTAR KENANGAN -->
+    <section class="screen" id="memories">
+        <main class="journey-container">
+            <p class="eyebrow">BAB 03 · HAL-HAL KECIL</p>
+            <h2>Momen-Momen <span>Sederhana</span></h2>
+
+            <p class="journey-text">
+Terkadang, kebahagiaan bukan tentang
+hal-hal yang besar dan luar biasa.
+
+Itu bisa hadir melalui percakapan ringan,
+tawa tanpa alasan, candaan sederhana,
+dan momen yang rasanya ingin diulang lagi.
+            </p>
+
+            <div class="memory-grid">
+                <button class="memory-card" onclick="openMemoryPage('smile')">
+                    <span>♡</span>
+                    <p>Senyuman Kecil</p>
+                    <small>KLIK UNTUK MELIHAT</small>
+                </button>
+
+                <button class="memory-card" onclick="openMemoryPage('conversation')">
+                    <span>✧</span>
+                    <p>Percakapan</p>
+                    <small>KLIK UNTUK MELIHAT</small>
+                </button>
+
+                <button class="memory-card" onclick="openMemoryPage('special')">
+                    <span>❀</span>
+                    <p>Hal Spesial</p>
+                    <small>KLIK UNTUK MELIHAT</small>
+                </button>
+            </div>
+
+            <button class="main-button" onclick="nextChapter('future')">
+                BAGAIMANA SELANJUTNYA? →
+            </button>
+        </main>
+    </section>
+
+    <!-- HALAMAN DETAIL: KENANGAN PERTAMA · SENYUMAN KECIL -->
+    <section class="screen memory-detail" id="smile">
+        <main class="detail-container">
+            <p class="eyebrow">KENANGAN PERTAMA · SENYUMAN KECIL</p>
+            <h2>Sebuah Senyuman <span>Sederhana</span></h2>
+            <p class="detail-text gallery-intro">Empat ruang untuk menyimpan senyuman dan momen-momen kecil yang membuat hari terasa lebih baik.</p>
+
+            <div class="photo-gallery photo-gallery-4" aria-label="Galeri KENANGAN PERTAMA · SENYUMAN KECIL">
+                <figure class="gallery-photo">
+                    <img src="foto10.jpeg" alt="KENANGAN PERTAMA · SENYUMAN KECIL 1"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+                    <div class="photo-placeholder">
+                        <span>＋</span>
+                        <p>Foto 1<br><small>images/senyuman-1.jpg</small></p>
+                    </div>
+                    <figcaption>01 · Sebuah momen</figcaption>
+                </figure>
+
+                <figure class="gallery-photo">
+                    <img src="ouh2.jpeg" alt="KENANGAN PERTAMA · SENYUMAN KECIL 2"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+                    <div class="photo-placeholder">
+                        <span>＋</span>
+                        <p>Foto 2<br><small>images/senyuman-2.jpg</small></p>
+                    </div>
+                    <figcaption>02 · Cerita sederhana</figcaption>
+                </figure>
+
+                <figure class="gallery-photo">
+                    <img src="ouh7.jpeg" alt="KENANGAN PERTAMA · SENYUMAN KECIL 3"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+                    <div class="photo-placeholder">
+                        <span>＋</span>
+                        <p>Foto 3<br><small>images/senyuman-3.jpg</small></p>
+                    </div>
+                    <figcaption>03 · Untuk dikenang</figcaption>
+                </figure>
+
+                <figure class="gallery-photo">
+                    <img src="ouh6.jpeg" alt="KENANGAN PERTAMA · SENYUMAN KECIL 4"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+                    <div class="photo-placeholder">
+                        <span>＋</span>
+                        <p>Foto 4<br><small>images/senyuman-4.jpg</small></p>
+                    </div>
+                    <figcaption>04 · Bagian favorit</figcaption>
+                </figure>
+            </div>
+
+            <div class="detail-divider"></div>
+            <p class="detail-text">Setiap foto menyimpan cerita kecil yang punya tempat tersendiri.</p>
+            <button class="main-button" onclick="showScreen('memories')">← KEMBALI KE KENANGAN</button>
+        </main>
+    </section>
+
+    <!-- HALAMAN DETAIL: KENANGAN KEDUA · PERCAKAPAN -->
+    <section class="screen memory-detail" id="conversation">
+        <main class="detail-container">
+            <p class="eyebrow">KENANGAN KEDUA · PERCAKAPAN</p>
+            <h2>Cerita di Balik <span>Setiap Kata</span></h2>
+            <p class="detail-text gallery-intro">Tiga ruang untuk mengabadikan cerita, obrolan, dan percakapan sederhana yang ingin dikenang.</p>
+
+            <div class="photo-gallery photo-gallery-3" aria-label="Galeri KENANGAN KEDUA · PERCAKAPAN">
+                <figure class="gallery-photo">
+                    <img src="pesan1.jpeg" alt="KENANGAN KEDUA · PERCAKAPAN 1"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+                    <div class="photo-placeholder">
+                        <span>＋</span>
+                        <p>Foto 1<br><small>images/percakapan-1.jpg</small></p>
+                    </div>
+                    <figcaption>01 · Sebuah momen</figcaption>
+                </figure>
+
+                <figure class="gallery-photo">
+                    <img src="pesan2.jpeg" alt="KENANGAN KEDUA · PERCAKAPAN 2"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+                    <div class="photo-placeholder">
+                        <span>＋</span>
+                        <p>Foto 2<br><small>images/percakapan-2.jpg</small></p>
+                    </div>
+                    <figcaption>02 · Cerita sederhana</figcaption>
+                </figure>
+
+                <figure class="gallery-photo">
+                    <img src="pesan3.jpeg" alt="KENANGAN KEDUA · PERCAKAPAN 3"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+                    <div class="photo-placeholder">
+                        <span>＋</span>
+                        <p>Foto 3<br><small>images/percakapan-3.jpg</small></p>
+                    </div>
+                    <figcaption>03 · Untuk dikenang</figcaption>
+                </figure>
+
+
+            </div>
+
+            <div class="detail-divider"></div>
+            <p class="detail-text">Setiap foto menyimpan cerita kecil yang punya tempat tersendiri.</p>
+            <button class="main-button" onclick="showScreen('memories')">← KEMBALI KE KENANGAN</button>
+        </main>
+    </section>
+
+    <!-- HALAMAN DETAIL: KENANGAN KETIGA · HAL SPESIAL -->
+    <section class="screen memory-detail" id="special">
+        <main class="detail-container">
+            <p class="eyebrow">KENANGAN KETIGA · HAL SPESIAL</p>
+            <h2>Tentang Sesuatu <span>Yang Istimewa</span></h2>
+            <p class="detail-text gallery-intro">Tiga ruang untuk menyimpan momen yang terasa istimewa dan punya arti tersendiri.</p>
+
+            <div class="photo-gallery photo-gallery-3" aria-label="Galeri KENANGAN KETIGA · HAL SPESIAL">
+                <figure class="gallery-photo">
+                    <img src="ouh1.jpeg" alt="KENANGAN KETIGA · HAL SPESIAL 1"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+                    <div class="photo-placeholder">
+                        <span>＋</span>
+                        <p>Foto 1<br><small>images/spesial-1.jpg</small></p>
+                    </div>
+                    <figcaption>01 · Sebuah momen</figcaption>
+                </figure>
+
+                <figure class="gallery-photo">
+                    <img src="ouh4.jpeg" alt="KENANGAN KETIGA · HAL SPESIAL 2"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+                    <div class="photo-placeholder">
+                        <span>＋</span>
+                        <p>Foto 2<br><small>images/spesial-2.jpg</small></p>
+                    </div>
+                    <figcaption>02 · Cerita sederhana</figcaption>
+                </figure>
+
+                <figure class="gallery-photo">
+                    <img src="ouh9.jpeg" alt="KENANGAN KETIGA · HAL SPESIAL 3"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+                    <div class="photo-placeholder">
+                        <span>＋</span>
+                        <p>Foto 3<br><small>images/spesial-3.jpg</small></p>
+                    </div>
+                    <figcaption>03 · Untuk dikenang</figcaption>
+                </figure>
+            </div>
+
+            <div class="detail-divider"></div>
+            <p class="detail-text">Setiap foto menyimpan cerita kecil yang punya tempat tersendiri.</p>
+            <button class="main-button" onclick="showScreen('memories')">← KEMBALI KE KENANGAN</button>
+        </main>
+    </section>
+
+    <!-- BAB 04: MASA DEPAN -->
+    <section class="screen" id="future">
+        <main class="journey-container">
+            <p class="eyebrow">BAB 04 · HARI ESOK</p>
+            <h2>Melampaui <span>Hari Ini</span></h2>
+            <div class="heart-icon">♡</div>
+
+            <p class="journey-text">
+Saya tidak tahu persis seperti apa
+hari-hari yang akan datang.
+
+Mungkin ada tempat baru,
+cerita baru, kejutan tak terduga,
+dan banyak hal yang belum kita ketahui.
+
+Namun, saya berharap kita selalu temukan
+alasan untuk tersenyum dalam setiap
+perjalanan yang kita lalui.
+
+Sebab setiap hari selalu punya
+kemungkinan untuk menjadi lebih baik.
+            </p>
+
+            <button class="main-button" onclick="nextChapter('final')">
+                SATU PESAN TERAKHIR →
+            </button>
+        </main>
+    </section>
+
+    <!-- BAB TERAKHIR -->
+    <section class="screen final-screen" id="final">
+        <main class="journey-container final-container">
+            <p class="eyebrow">BAB TERAKHIR</p>
+            <h2>Cerita <span>Favoritku</span></h2>
+            <div class="heart-icon">♡</div>
+
+            <div class="final-story-layout">
+                <!-- TEMPLATE FOTO SAMPING: gunakan empat kali -->
+                <div class="final-side-photos" aria-label="Dua foto di sebelah kiri">
+                    <figure class="final-side-photo">
+                        <img src="ouh3.jpeg" alt="Foto cerita favorit 1"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+                        <div class="final-photo-placeholder">＋<small>images/terakhir-1.jpg</small></div>
+                    </figure>
+                    <figure class="final-side-photo">
+                        <img src="foto2.jpeg" alt="Foto cerita favorit 2"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+                        <div class="final-photo-placeholder">＋<small>images/terakhir-2.jpg</small></div>
+                    </figure>
+                </div>
+
+                <div class="final-story-text">
+                    <p class="final-message">
+Jika saya bisa memilih satu cerita
+untuk dibaca berulang kali,
+mungkin saya akan memilih cerita ini.
+
+Bukan karena semuanya sempurna,
+melainkan karena setiap bagian kecilnya
+punya sesuatu yang layak dikenang.
+
+Terima kasih sudah menjadi bagian
+dari perjalanan sederhana ini.
+
+Dan jika ada satu hal yang saya harapkan...
+
+<span>
+Semoga cerita baik selalu punya
+halaman berikutnya.
+</span>
+                    </p>
+                    <div class="final-signature">♡</div>
+                </div>
+
+                <!-- TEMPLATE FOTO SAMPING: gunakan empat kali -->
+                <div class="final-side-photos" aria-label="Dua foto di sebelah kanan">
+                    <figure class="final-side-photo">
+                        <img src="ouh5.jpeg" alt="Foto cerita favorit 3"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+                        <div class="final-photo-placeholder">＋<small>images/terakhir-3.jpg</small></div>
+                    </figure>
+                    <figure class="final-side-photo">
+                        <img src="ouh2.jpeg" alt="Foto cerita favorit 4"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+                        <div class="final-photo-placeholder">＋<small>images/terakhir-4.jpg</small></div>
+                    </figure>
+                </div>
+            </div>
+
+            <!-- TEMPLATE FOTO BAWAH: satu foto di ujung bab -->
+            <figure class="final-bottom-photo">
+                <img src="foto7.jpeg" alt="Foto penutup cerita favorit"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+                <div class="final-photo-placeholder">＋<small>images/terakhir-5.jpg</small></div>
+                <figcaption>Satu lagi untuk dikenang ♡</figcaption>
+            </figure>
+
+            <button class="main-button" onclick="restartJourney()">
+                BACA CERITA LAGI ↺
+            </button>
+        </main>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
